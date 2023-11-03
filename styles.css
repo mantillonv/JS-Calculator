@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Upper Section */
+.upper-section {
+
+}
+
+.upper-section .upper-buttons #equal-to,
+.upper-section .upper-buttons #dot {
+
+}
+
+input {
+
+}
+
+/* Middle Section */
+.middle-section {
+
+}
+
+#add, #substract, #multiply, #divide {
+
+}
+
+#ac, #backspace {
+    
+}
+
+/* Lower Section */
+.lower-section {
+
+}
+
+#one, #two, #three, #four, #five,
+#six, #seven, #eight, #nine, #zero {
+    
+}
+
+/* Footer */ 
+.footer {
+
+}

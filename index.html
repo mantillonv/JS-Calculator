@@ -1,45 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Web Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <link href="styles.css" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
-    <div class="upper-section">
-        <div class="upper-buttons">
-            <button id="equal-to"></button>
-            <button id="dot"></button>
-        </div>
-        <input type="text" id="result-display"></input>
+  <div class="calculator-grid">
+    <div class="output">
+      <div data-previous-operand class="previous-operand"></div>
+      <div data-current-operand class="current-operand"></div>
     </div>
-    <div class="middle-section">
-        <button id="ac"></button>
-        <button id="backspace"></button>
-        <button id="add"></button>
-        <button id="substract"></button>
-        <button id="multiply"></button>
-        <button id="divide"></button>
-    </div>
-    <div class="lower-section">
-        <button id="one"></button>
-        <button id="two"></button>
-        <button id="three"></button>
-        <button id="four"></button>
-        <button id="five"></button>
-        <button id="six"></button>
-        <button id="seven"></button>
-        <button id="eight"></button>
-        <button id="nine"></button>
-        <button id="zero"></button>
-    </div>
-    <div class="footer">
-        <p>2023 mantillonv for <a href="https://www.theodinproject.com">The Odin Project©</a></p>
-    </div>
-    <script src="script.js"></script>
+    <button data-all-clear class="span-two" id="all-clear">AC</button>
+    <button data-delete id="del">⌫</button>
+    <button data-operation>÷</button>
+    <button data-number>1</button>
+    <button data-number>2</button>
+    <button data-number>3</button>
+    <button data-operation>*</button>
+    <button data-number>4</button>
+    <button data-number>5</button>
+    <button data-number>6</button>
+    <button data-operation>+</button>
+    <button data-number>7</button>
+    <button data-number>8</button>
+    <button data-number>9</button>
+    <button data-operation>-</button>
+    <button data-number>.</button>
+    <button data-number>0</button>
+    <button data-equals class="span-two" id="equals">=</button>
+  </div>
+  <div class="footer">
+    <p>2023 mantillonv for <a href="https://www.theodinproject.com">The Odin Project</a></p>
+  </div>
 </body>
+
 </html>

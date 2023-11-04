@@ -1,46 +1,105 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+}
+
 body {
-    display: flex;
-    flex-direction: column;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
 }
 
-/* Upper Section */
-.upper-section {
-
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
 }
 
-.upper-section .upper-buttons #equal-to,
-.upper-section .upper-buttons #dot {
-
+.calculator-grid button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
 }
 
-input {
-
+.calculator-grid  button:hover {
+  background-color: rgba(255, 255, 255, .9);
 }
 
-/* Middle Section */
-.middle-section {
-
+.span-two {
+  grid-column: span 2;
 }
 
-#add, #substract, #multiply, #divide {
-
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, .75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-#ac, #backspace {
-    
+.output .previous-operand {
+  color: rgba(255, 255, 255, .75);
+  font-size: 1.5rem;
 }
 
-/* Lower Section */
-.lower-section {
-
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
 }
 
-#one, #two, #three, #four, #five,
-#six, #seven, #eight, #nine, #zero {
-    
+#all-clear {
+    background-color: #de3163;
+    font-weight: 800;
+    color: white;
 }
 
-/* Footer */ 
+#del {
+    background-color: #6495ed;
+    font-weight: 800;
+    color: white;
+}
+
+#equals {
+    background-color: #afe1af;
+    font-weight: 900;
+}
+
+#all-clear,
+#del,
+#equals {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#all-clear:hover {
+    background-color: #ff7f9c;
+}
+
+#del:hover {
+    background-color: #7a92ff;
+}
+
+#equals:hover {
+    background-color: #aaffaa;
+}
+
 .footer {
-
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
